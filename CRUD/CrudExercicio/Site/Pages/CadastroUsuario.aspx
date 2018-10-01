@@ -25,7 +25,7 @@
                         <asp:RequiredFieldValidator ID="requiredNome" runat="server" ControlToValidate="txtNome" ErrorMessage="Digite seu Nome Completo" ForeColor="Red" />
                         <br />
                         <br />
-                        Usuário:
+                        Login:
                         <br />
                         <asp:TextBox ID="txtUser" runat="server" placeholder="Digite um nome de usuário" Width="45%" CssClass="form-control" />
                         <asp:RequiredFieldValidator ID="requiredUser" runat="server" ControlToValidate="txtUser" ErrorMessage="Digite um Nome de Usuário" ForeColor="Red" />

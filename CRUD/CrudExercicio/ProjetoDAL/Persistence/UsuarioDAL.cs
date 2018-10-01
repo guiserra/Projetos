@@ -83,6 +83,40 @@ namespace ProjetoDAL.Persistence
             }
         }
 
+        public Usuario PesquisarPorCodigo(int Codigo)
+        {
+            try
+            {
+                AbrirConexao();
+                Cmd = new SqlCommand("select * from Usuario where Codigo=@v1", Con);
+
+                Cmd.Parameters.AddWithValue("@v1", Codigo);
+                Dr = Cmd.ExecuteReader();
+
+                Usuario u = null;
+
+                if (Dr.Read())
+                {
+                    u = new Usuario();
+
+                    u.UsuarioId = Convert.ToInt32(Dr["Codigo"]);
+                    u.Nome = Convert.ToString(Dr["Nome"]);
+                    u.Login = Convert.ToString(Dr["Login"]);
+                    u.Senha = Convert.ToString(Dr["Senha"]);
+                }
+                return u;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
+            finally
+            {
+                FecharConexao();
+            }
+        }
+
         public List<Usuario> Listar()
         {
             try

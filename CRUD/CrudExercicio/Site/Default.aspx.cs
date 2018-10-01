@@ -25,21 +25,21 @@ namespace Site
                     lblMensagem.Text = "Selecione uma opção válida!";
                     break;
                 case "1":
-                    Response.Redirect("/Pages/Usuario/CadastroUsuario.aspx");
+                    Response.Redirect("/Pages/CadastroUsuario.aspx");
                     break;
                 case "2":
-                    Response.Redirect("/Pages/Usuario/ConsultaUsuario.aspx");
+                    Response.Redirect("/Pages/ConsultaUsuario.aspx");
                     break;
                 case "3":
-                    Response.Redirect("/Pages/Projeto/CadastroProjeto.aspx");
+                    Response.Redirect("/Pages/CadastroProjeto.aspx");
                     break;
                 case "4":
-                    Response.Redirect("/Pages/Projeto/ConsultaProjeto.aspx");
+                    Response.Redirect("/Pages/ConsultaProjeto.aspx");
                     break;
                 default:
                     break;
             }
         }
-        
+
     }
 }

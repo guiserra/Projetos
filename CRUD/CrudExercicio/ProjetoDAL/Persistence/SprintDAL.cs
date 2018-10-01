@@ -61,5 +61,76 @@ namespace ProjetoDAL.Persistence
                 FecharConexao();
             }
         }
+
+        public Sprint PesquisarPorCodigo(int Codigo)
+        {
+            try
+            {
+                AbrirConexao();
+                Cmd = new SqlCommand("select * from Sprint where Codigo=@v1", Con);
+
+                Cmd.Parameters.AddWithValue("@v1", Codigo);
+                Dr = Cmd.ExecuteReader();
+
+                Sprint u = null;
+
+                if (Dr.Read())
+                {
+                    u = new Sprint();
+
+                    u.SprintId = Convert.ToInt32(Dr["Codigo"]);
+                    u.Nome = Convert.ToString(Dr["Nome"]);
+                    u.Descricao = Convert.ToString(Dr["Descricao"]);
+                    u.DtInicio = Convert.ToDateTime(Dr["DataInicio"]);
+                    u.Duracao = Convert.ToInt32(Dr["Duracao"]);
+                }
+                return u;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
+            finally
+            {
+                FecharConexao();
+            }
+        }
+
+        public List<Sprint> Listar()
+        {
+            try
+            {
+                AbrirConexao();
+
+                Cmd = new SqlCommand("select * from Sprint", Con);
+                Dr = Cmd.ExecuteReader();
+
+                List<Sprint> lista = new List<Sprint>();
+
+                while (Dr.Read())
+                {
+                    Sprint u = new Sprint();
+
+                    u.SprintId = Convert.ToInt32(Dr["Codigo"]);
+                    u.Nome = Convert.ToString(Dr["Nome"]);
+                    u.Descricao = Convert.ToString(Dr["Descricao"]);
+                    u.DtInicio = Convert.ToDateTime(Dr["DataInicio"]);
+                    u.Duracao = Convert.ToInt32(Dr["Duracao"]);
+
+                    lista.Add(u);
+                }
+                return lista;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception("Erro ao listar as sprints: " + e.Message);
+            }
+            finally
+            {
+                FecharConexao();
+            }
+        }
     }
 }

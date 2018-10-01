@@ -10,7 +10,7 @@
 namespace Site.Pages {
     
     
-    public partial class Consulta {
+    public partial class EditarUsuario {
         
         /// <summary>
         /// Controle form1.
@@ -20,23 +20,5 @@ namespace Site.Pages {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
-        /// Controle gridUsuario.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridUsuario;
-        
-        /// <summary>
-        /// Controle lblMessagem.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMessagem;
     }
 }

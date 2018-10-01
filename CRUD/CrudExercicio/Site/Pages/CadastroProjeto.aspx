@@ -31,12 +31,6 @@
                         <asp:RequiredFieldValidator ID="requiredTipo" runat="server" ControlToValidate="txtTipo" ErrorMessage="Digite o tipo do projeto" ForeColor="Red" />
                         <br />
                         <br />
-                        Quantidade de Pessoas:
-                        <br />
-                        <asp:TextBox TextMode="Number" ID="txtQnt" runat="server" placeholder="Informe a quantidade de pessoas no projeto" Width="45%" CssClass="form-control" />
-                        <asp:RequiredFieldValidator ID="requiredSenha" runat="server" ControlToValidate="txtQnt" ErrorMessage="Digite a quantidade de pessoas no projeto" ForeColor="Red" />
-                        <br />
-                        <br />
 
                         <p>
                             <asp:Label ID="lblMessagem" runat="server" />

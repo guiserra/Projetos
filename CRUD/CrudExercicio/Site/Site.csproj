@@ -71,11 +71,14 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Default.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Pages\Projeto\CadastroProjeto.aspx" />
-    <Content Include="Pages\Usuario\CadastroUsuario.aspx" />
-    <Content Include="Pages\Projeto\ConsultaProjeto.aspx" />
-    <Content Include="Pages\Usuario\ConsultaUsuario.aspx" />
+    <Content Include="Pages\CadastroProjeto.aspx" />
+    <Content Include="Pages\CadastroSprint.aspx" />
+    <Content Include="Pages\CadastroUsuario.aspx" />
+    <Content Include="Pages\ConsultaProjeto.aspx" />
+    <Content Include="Pages\ConsultaSprint.aspx" />
+    <Content Include="Pages\ConsultaUsuario.aspx" />
     <Content Include="Pages\Detalhes.aspx" />
+    <Content Include="Pages\EditarUsuario.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
@@ -102,32 +105,46 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Projeto\CadastroProjeto.aspx.cs">
+    <Compile Include="Pages\CadastroProjeto.aspx.cs">
       <DependentUpon>CadastroProjeto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Projeto\CadastroProjeto.aspx.designer.cs">
+    <Compile Include="Pages\CadastroProjeto.aspx.designer.cs">
       <DependentUpon>CadastroProjeto.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Usuario\CadastroUsuario.aspx.cs">
+    <Compile Include="Pages\CadastroSprint.aspx.cs">
+      <DependentUpon>CadastroSprint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CadastroSprint.aspx.designer.cs">
+      <DependentUpon>CadastroSprint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CadastroUsuario.aspx.cs">
       <DependentUpon>CadastroUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Usuario\CadastroUsuario.aspx.designer.cs">
+    <Compile Include="Pages\CadastroUsuario.aspx.designer.cs">
       <DependentUpon>CadastroUsuario.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Projeto\ConsultaProjeto.aspx.cs">
+    <Compile Include="Pages\ConsultaProjeto.aspx.cs">
       <DependentUpon>ConsultaProjeto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Projeto\ConsultaProjeto.aspx.designer.cs">
+    <Compile Include="Pages\ConsultaProjeto.aspx.designer.cs">
       <DependentUpon>ConsultaProjeto.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Usuario\ConsultaUsuario.aspx.cs">
+    <Compile Include="Pages\ConsultaSprint.aspx.cs">
+      <DependentUpon>ConsultaSprint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ConsultaSprint.aspx.designer.cs">
+      <DependentUpon>ConsultaSprint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ConsultaUsuario.aspx.cs">
       <DependentUpon>ConsultaUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Usuario\ConsultaUsuario.aspx.designer.cs">
+    <Compile Include="Pages\ConsultaUsuario.aspx.designer.cs">
       <DependentUpon>ConsultaUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Detalhes.aspx.cs">
@@ -136,6 +153,13 @@
     </Compile>
     <Compile Include="Pages\Detalhes.aspx.designer.cs">
       <DependentUpon>Detalhes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EditarUsuario.aspx.cs">
+      <DependentUpon>EditarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EditarUsuario.aspx.designer.cs">
+      <DependentUpon>EditarUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

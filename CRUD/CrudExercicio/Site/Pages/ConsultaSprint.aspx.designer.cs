@@ -10,7 +10,7 @@
 namespace Site.Pages {
     
     
-    public partial class CadastrarProjeto {
+    public partial class ConsultaSprint {
         
         /// <summary>
         /// Controle form1.
@@ -20,6 +20,51 @@ namespace Site.Pages {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        
+        /// <summary>
+        /// Controle txtCodigo.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCodigo;
+        
+        /// <summary>
+        /// Controle btnPesquisa.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnPesquisa;
+        
+        /// <summary>
+        /// Controle gridSprint.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gridSprint;
+        
+        /// <summary>
+        /// Controle lblMessagem.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessagem;
+        
+        /// <summary>
+        /// Controle pnlDados.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlDados;
         
         /// <summary>
         /// Controle txtNome.
@@ -40,57 +85,66 @@ namespace Site.Pages {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredNome;
         
         /// <summary>
-        /// Controle txtTipo.
+        /// Controle txtDescricao.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTipo;
+        protected global::System.Web.UI.WebControls.TextBox txtDescricao;
         
         /// <summary>
-        /// Controle requiredTipo.
+        /// Controle requiredDesc.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredTipo;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredDesc;
         
         /// <summary>
-        /// Controle txtQnt.
+        /// Controle txtDuracao.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtQnt;
+        protected global::System.Web.UI.WebControls.TextBox txtDuracao;
         
         /// <summary>
-        /// Controle requiredSenha.
+        /// Controle requiredDur.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredSenha;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredDur;
         
         /// <summary>
-        /// Controle lblMessagem.
+        /// Controle txtDataInicio.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMessagem;
+        protected global::System.Web.UI.WebControls.TextBox txtDataInicio;
         
         /// <summary>
-        /// Controle btnCadastro.
+        /// Controle requiredDtInicio.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCadastro;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredDtInicio;
+        
+        /// <summary>
+        /// Controle btnEditar.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnEditar;
     }
 }
