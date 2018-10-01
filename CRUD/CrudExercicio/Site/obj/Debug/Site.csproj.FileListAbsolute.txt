@@ -1,0 +1,11 @@
+G:\Documents\Repositorio-Resource\CRUD\CrudExercicio\Site\bin\Site.dll.config
+G:\Documents\Repositorio-Resource\CRUD\CrudExercicio\Site\bin\Site.dll
+G:\Documents\Repositorio-Resource\CRUD\CrudExercicio\Site\bin\Site.pdb
+G:\Documents\Repositorio-Resource\CRUD\CrudExercicio\Site\obj\Debug\Site.csprojAssemblyReference.cache
+G:\Documents\Repositorio-Resource\CRUD\CrudExercicio\Site\obj\Debug\Site.csproj.CoreCompileInputs.cache
+G:\Documents\Repositorio-Resource\CRUD\CrudExercicio\Site\obj\Debug\Site.csproj.CopyComplete
+G:\Documents\Repositorio-Resource\CRUD\CrudExercicio\Site\obj\Debug\Site.dll
+G:\Documents\Repositorio-Resource\CRUD\CrudExercicio\Site\obj\Debug\Site.pdb
+G:\Documents\Repositorio-Resource\CRUD\CrudExercicio\Site\bin\ProjetoDAL.dll
+G:\Documents\Repositorio-Resource\CRUD\CrudExercicio\Site\bin\ProjetoDAL.pdb
+G:\Documents\Repositorio-Resource\CRUD\CrudExercicio\Site\bin\ProjetoDAL.dll.config

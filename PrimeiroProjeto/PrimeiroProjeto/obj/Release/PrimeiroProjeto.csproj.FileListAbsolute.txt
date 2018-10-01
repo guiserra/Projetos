@@ -1,0 +1,6 @@
+G:\Documents\Resource\PrimeiroProjeto\PrimeiroProjeto\bin\Release\PrimeiroProjeto.exe.config
+G:\Documents\Resource\PrimeiroProjeto\PrimeiroProjeto\bin\Release\PrimeiroProjeto.exe
+G:\Documents\Resource\PrimeiroProjeto\PrimeiroProjeto\bin\Release\PrimeiroProjeto.pdb
+G:\Documents\Resource\PrimeiroProjeto\PrimeiroProjeto\obj\Release\PrimeiroProjeto.csproj.CoreCompileInputs.cache
+G:\Documents\Resource\PrimeiroProjeto\PrimeiroProjeto\obj\Release\PrimeiroProjeto.exe
+G:\Documents\Resource\PrimeiroProjeto\PrimeiroProjeto\obj\Release\PrimeiroProjeto.pdb

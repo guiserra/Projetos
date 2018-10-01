@@ -1,0 +1,7 @@
+G:\Documents\Repositorio-Resource\CRUD\CrudExercicio\ProjetoDAL\bin\ProjetoDAL.dll.config
+G:\Documents\Repositorio-Resource\CRUD\CrudExercicio\ProjetoDAL\bin\ProjetoDAL.dll
+G:\Documents\Repositorio-Resource\CRUD\CrudExercicio\ProjetoDAL\bin\ProjetoDAL.pdb
+G:\Documents\Repositorio-Resource\CRUD\CrudExercicio\ProjetoDAL\obj\Debug\ProjetoDAL.csprojAssemblyReference.cache
+G:\Documents\Repositorio-Resource\CRUD\CrudExercicio\ProjetoDAL\obj\Debug\ProjetoDAL.csproj.CoreCompileInputs.cache
+G:\Documents\Repositorio-Resource\CRUD\CrudExercicio\ProjetoDAL\obj\Debug\ProjetoDAL.dll
+G:\Documents\Repositorio-Resource\CRUD\CrudExercicio\ProjetoDAL\obj\Debug\ProjetoDAL.pdb
