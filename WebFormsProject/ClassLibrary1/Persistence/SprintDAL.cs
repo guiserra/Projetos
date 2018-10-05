@@ -81,6 +81,40 @@ namespace ClassLibrary1.Persistence
             }
         }
 
+        public Sprint PesquisarId(int Codigo)
+        {
+            try
+            {
+                AbrirConexao();
+                Cmd = new SqlCommand("SELECT * FROM Sprint WHERE Codigo = @v1", Con);
+                Cmd.Parameters.AddWithValue("@v1", Codigo);
+                Dr = Cmd.ExecuteReader(); //Execucao da leitura das informaçoes no BD
+
+                Sprint p = null;
+
+                if (Dr.Read())
+                {
+                    p = new Sprint();
+
+                    Convert.ToInt32(Dr["Codigo"]);
+                    Convert.ToString(Dr["Nome"]);
+                    Convert.ToInt32(Dr["Semanas"]);
+                    Convert.ToBoolean(Dr["Status"]);
+                    Convert.ToString(Dr["Observacoes"]);
+                }
+
+                return p;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Erro ao buscar Sprint: " + e.Message);
+            }
+            finally
+            {
+                FecharConexao();
+            }
+        }
+
         public List<Sprint> ListarSprt()
         {
             try
@@ -93,7 +127,7 @@ namespace ClassLibrary1.Persistence
 
                 while (Dr.Read())
                 {
-                    Sprint sp = new Sprint( 
+                    Sprint sp = new Sprint(
                         Convert.ToInt32(Dr["Codigo"]),
                         Convert.ToString(Dr["Nome"]),
                         Convert.ToInt32(Dr["Semanas"]),

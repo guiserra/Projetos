@@ -22,5 +22,9 @@ namespace ClassLibrary1.Model
             this.Status = Status;
             this.Observacoes = Observacoes;
         }
+        public Sprint()
+        {
+            
+        }
     }
 }

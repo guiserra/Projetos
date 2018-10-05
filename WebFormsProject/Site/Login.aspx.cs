@@ -14,30 +14,35 @@ namespace Site
 
         protected void btnLogar(object sender, EventArgs e)
         {
-            try
+            Usuario u = new Usuario();
+            u.Email = Convert.ToString(txtEmail.Text);
+            u.Senha = txtSenha.Text;
+
+            UsuarioDAL UsuarioDal = new UsuarioDAL();
+            Usuario usuarioEncontrado = UsuarioDal.ValidarLogin(u);
+
+            if (usuarioEncontrado.Codigo != 0)
             {
-                Usuario u = new Usuario();
-
-                u.Email = txtEmail.Text;
-                u.Senha = txtSenha.Text;
-
-                UsuarioDAL ud = new UsuarioDAL();
-
-                if(ud.ValidarLogin(u) == true)
+                if (u.Senha == usuarioEncontrado.Senha)
                 {
-                    Response.Redirect("/Pages/Default.aspx");
+                    Session["CodigoUsuarioLogado"] = usuarioEncontrado.Codigo;
+                    Session["NomeUsuarioLogado"] = usuarioEncontrado.Nome;
+
+                    Response.Redirect("/Default.aspx");
                 }
                 else
                 {
-                    lblMensagem.Text = "Usuario não cadastrado";
-                    txtEmail.Text = string.Empty;
-                    txtSenha.Text = string.Empty;
+                    lblMensagem.Text = "Senha do usuário incorreta!";
                 }
             }
-            catch (Exception ex)
+            else
             {
-                lblMensagem.Text = ex.Message;
+                lblMensagem.Text = "Usuário não encontrado!";
             }
+
+            txtEmail.Text = string.Empty;
+            txtSenha.Text = string.Empty;
         }
+
     }
 }

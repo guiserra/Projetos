@@ -32,5 +32,26 @@ namespace Site.Pages
                 lblMensagem.Text = ex.Message;
             }
         }
+
+        protected void btnAcessarSprint(object sender, EventArgs e)
+        {
+            //Capturar o valor selecionado na nossa dropdownlist
+            string opcao = ddlProjeto.SelectedValue;
+
+            switch (opcao)
+            {
+                case "0":
+                    lblMensagem.Text = "Selecione uma opção válida!";
+                    break;
+                case "1":
+                    Response.Redirect("/Pages/CadastroSprint.aspx");
+                    break;
+                case "2":
+                    Response.Redirect("/Pages/ListaSprint.aspx");
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }

@@ -34,6 +34,11 @@ namespace ClassLibrary1.Persistence
             }
         }
 
+        public Usuario PesquisarPorCodigo(object codigo)
+        {
+            throw new NotImplementedException();
+        }
+
         public void AtualizarUsu(Usuario u)
         {
             try
@@ -146,20 +151,50 @@ namespace ClassLibrary1.Persistence
             }
         }
 
-        public Boolean ValidarLogin(Usuario u)
+        public Usuario ValidarLogin(Usuario u)
         {
             List<Usuario> ul = ListarUsu();
-            int cont = 0;
+            Usuario cont = new Usuario();
 
-            for(int i = 0; i < ul.Count; i++)
+            for (int i = 0; i < ul.Count; i++)
             {
                 if (ul[i].Email == u.Email && ul[i].Senha == u.Senha)
-                    cont++;
+                    cont.Codigo = ul[i].Codigo;
             }
-            if(cont > 0)
-                return true;
-            else
-                return false;
+            return cont;
+        }
+
+        public Usuario PesquisarPorCodigo(int Codigo)
+        {
+            try
+            {
+                AbrirConexao();
+                Cmd = new SqlCommand("select * from Usuario where Codigo=@v1", Con);
+
+                Cmd.Parameters.AddWithValue("@v1", Codigo);
+
+                Dr = Cmd.ExecuteReader();
+
+                Usuario pessoaEncontrada = new Usuario();
+
+                if (Dr.Read())
+                {
+                    pessoaEncontrada.Codigo = Convert.ToInt32(Dr["Codigo"]);
+                    pessoaEncontrada.Nome = Convert.ToString(Dr["Nome"]);
+                    pessoaEncontrada.Email = Convert.ToString(Dr["Email"]);
+                    pessoaEncontrada.Senha = Convert.ToString(Dr["Senha"]);
+                }
+
+                return pessoaEncontrada;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao pesquisar o Usuario" + ex.Message);
+            }
+            finally
+            {
+                FecharConexao();
+            }
         }
     }
 }
