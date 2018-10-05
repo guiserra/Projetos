@@ -16,7 +16,7 @@ namespace ProjetoDAL.Persistence
         {
             try
             {
-                Con = new SqlConnection("Data Source=DESKTOP-A9G9V52/SQLEXPRESS;Initial Catalog=master;Integrated Security=True");
+                Con = new SqlConnection("Data Source=DESKTOP-A9G9V52\\SQLEXPRESS;Initial Catalog=master;Integrated Security=True");
                 Con.Open();
             }
             catch (Exception e)

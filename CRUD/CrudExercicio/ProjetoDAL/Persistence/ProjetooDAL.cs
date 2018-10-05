@@ -14,7 +14,7 @@ namespace ProjetoDAL.Persistence
             try
             {
                 AbrirConexao();
-                Cmd = new SqlCommand("insert into Projeto (Nome, Tipo) values(@v1, @v2, @v3)", Con);
+                Cmd = new SqlCommand("insert into Projeto (Nome, Tipo) values(@v1, @v2)", Con);
 
                 Cmd.Parameters.AddWithValue("@v1", p.Nome);
                 Cmd.Parameters.AddWithValue("@v2", p.Tipo);

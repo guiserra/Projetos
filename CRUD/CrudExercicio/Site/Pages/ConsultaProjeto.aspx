@@ -36,7 +36,7 @@
                     </asp:DropDownList>
                         <asp:Button ID="btnSprint" runat="server" Text="Acessar" CssClass="btn btn-primary" OnClick="btnAcessarSprint" />
                     </div>
-                    <asp:GridView ID="gridProjeto" runat="server" CssClass="table table-hover table-striped" GridLines="None" AutoGenerateColumns="false" BackColor="#999999">
+                    <asp:GridView ID="gridProjeto" runat="server" CssClass="table table-striped" GridLines="None" AutoGenerateColumns="false" BackColor="#999999">
                         <Columns>
                             <asp:BoundField DataField="ProjetoId" HeaderText="Codigo" />
                             <asp:BoundField DataField="Nome" HeaderText="Nome" />

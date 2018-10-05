@@ -23,7 +23,7 @@
                         <asp:Button ID="btnPesquisa" runat="server" Text="Pesquisar" CssClass="btn btn-info" OnClick="btnPesquisarUsuario" />
                     </div>
                     <br />
-                    <asp:GridView ID="gridUsuario" runat="server" CssClass="table table-hover table-striped" GridLines="None" AutoGenerateColumns="false" BackColor="#999999">
+                    <asp:GridView ID="gridUsuario" runat="server" CssClass="table table-striped" GridLines="None" AutoGenerateColumns="false" BackColor="#999999">
                         <Columns>
                             <asp:BoundField DataField="UsuarioId" HeaderText="Codigo" />
                             <asp:BoundField DataField="Nome" HeaderText="Nome" />

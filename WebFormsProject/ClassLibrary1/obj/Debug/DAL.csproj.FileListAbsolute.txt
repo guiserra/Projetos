@@ -1,0 +1,6 @@
+C:\Users\thom_\Downloads\Projetos C#\WebFormsProject\WebFormsProject\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\thom_\Downloads\Projetos C#\WebFormsProject\WebFormsProject\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\thom_\Downloads\Projetos C#\WebFormsProject\WebFormsProject\ClassLibrary1\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\thom_\Downloads\Projetos C#\WebFormsProject\WebFormsProject\ClassLibrary1\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\thom_\Downloads\Projetos C#\WebFormsProject\WebFormsProject\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\thom_\Downloads\Projetos C#\WebFormsProject\WebFormsProject\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
