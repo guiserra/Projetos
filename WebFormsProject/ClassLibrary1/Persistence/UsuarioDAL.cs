@@ -159,7 +159,12 @@ namespace ClassLibrary1.Persistence
             for (int i = 0; i < ul.Count; i++)
             {
                 if (ul[i].Email == u.Email && ul[i].Senha == u.Senha)
+                { 
                     cont.Codigo = ul[i].Codigo;
+                    cont.Senha = ul[i].Senha;
+                    cont.Nome = ul[i].Nome;
+                    cont.Email = ul[i].Email;
+                }
             }
             return cont;
         }
