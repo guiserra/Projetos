@@ -16,10 +16,14 @@
         <div class="container">
             <div class="span10 offset1">
                 <div class="row">
-                    <h1>BEM VINDO - <asp:Label ID="lblUsuarioLogado" runat="server" /> !
+                    <div class="well">
+                        <h1>BEM VINDO -
+                            <asp:Label ID="lblUsuarioLogado" runat="server" />
+                            !
                         <a id="botaoDireita" href="/Pages/ListaUsu.aspx" class="btn btn-warning btn">Lista de Usuários</a>
-                    </h1>
-                    <h3 class="well">Sua lista de projetos</h3>
+                        </h1>
+                        <h3>Sua lista de projetos</h3>
+                    </div>
                     <a id="botaoDireita" href="/Pages/DetalhesProj.aspx" class="btn btn-default btn-lg">Detalhes do Projetos</a>
                 </div>
                 <asp:GridView ID="gridProjetos" runat="server" CssClass="table table-hover table-striped" GridLines="None" AutoGenerateColumns="false" BackColor="#ccffff">

@@ -52,7 +52,7 @@ namespace Site.Pages
                     gridSprints.DataSource = sp.ListarSprt(codProj);//Popular a grid
 
                     if (sp.ListarSprt(codProj).Count > 0) {
-                        gridSprints.DataBind();                     //Exibe a grid
+                        gridSprints.DataBind();                //Exibe a grid
                     }
                     else
                     {

@@ -16,7 +16,7 @@ namespace ClassLibrary1.Model
 
         public Sprint()
         {
-            
+
         }
 
         public Sprint(int Codigo, string Nome, int Semanas, Boolean Status, string Observacoes)
@@ -26,6 +26,18 @@ namespace ClassLibrary1.Model
             this.Semanas = Semanas;
             this.Status = Status;
             this.Observacoes = Observacoes;
+        }
+
+        public String validarBoolean(Boolean Status)
+        {
+            if (Status == false)
+            {
+                return "Incompleto";
+            }
+            else
+            {
+                return "Completo";
+            }
         }
     }
 }
