@@ -19,23 +19,38 @@ namespace Site.Pages
         {
             try
             {
-                Sprint u = new Sprint();
+                if (int.Parse(txtDuracao.Text) > 0)
+                {
+                    Sprint u = new Sprint();
 
-                u.Nome = txtNome.Text;
-                u.Observacoes = txtDescricao.Text;
-                u.Semanas = int.Parse(txtDuracao.Text);
-                u.Status = Boolean.Parse(txtStatus.Text);
+                    u.Nome = txtNome.Text;
+                    u.Semanas = int.Parse(txtDuracao.Text);
+                    u.Observacoes = txtDescricao.Text;
 
-                SprintDAL d = new SprintDAL();
+                    if (txtStatus.Checked)
+                    {
+                        u.Status = true;
+                    }
+                    else
+                    {
+                        u.Status = false;
+                    }
 
-                d.CadastrarSprt(u);
+                    SprintDAL d = new SprintDAL();
 
-                lblMessagem.Text = "Sprint " + u.Nome + " cadastrada com sucesso!";
+                    d.CadastrarSprt(u);
 
-                txtNome.Text = string.Empty;
-                txtDescricao.Text = string.Empty;
-                txtDuracao.Text = string.Empty;
-                txtStatus.Text = string.Empty;
+                    lblMessagem.Text = "Sprint " + u.Nome + " cadastrada com sucesso!";
+
+                    txtNome.Text = string.Empty;
+                    txtDescricao.Text = string.Empty;
+                    txtDuracao.Text = string.Empty;
+                    txtStatus.Text = string.Empty;
+                }
+                else
+                {
+                    lblMessagem.Text = "Por favor declare uma duração da Sprint Valida!";
+                }
             }
             catch (Exception ex)
             {

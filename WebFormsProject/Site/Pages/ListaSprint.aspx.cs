@@ -31,6 +31,8 @@ namespace Site.Pages
         {
             try
             {
+                lblMessagem.Text = string.Empty;
+
                 int codigo = Convert.ToInt32(txtCodigo.Text);
 
                 SprintDAL d = new SprintDAL();
@@ -69,25 +71,28 @@ namespace Site.Pages
                 Sprint u = new Sprint();
 
                 u.Codigo = Convert.ToInt32(txtCodigo.Text);
-                u.Nome = Convert.ToString(txtNome.Text);
-                u.Observacoes = Convert.ToString(txtDescricao.Text);
-                u.Semanas = Convert.ToInt32(txtDuracao.Text);
-                u.Status = Convert.ToBoolean(txtStatus.Text);
+                u.Nome = txtNome.Text;
+                u.Semanas = int.Parse(txtDuracao.Text);
+                u.Observacoes = txtDescricao.Text;
+
+                if (txtStatus.Checked)
+                {
+                    u.Status = true;
+                }
+                else
+                {
+                    u.Status = false;
+                }
 
                 SprintDAL d = new SprintDAL();
                 d.AtualizarSprt(u);
 
-                lblMessagem.Text = "Sprint atualizado com sucesso";
+                Response.Redirect("/Pages/ListaSprint.aspx");
 
-                txtCodigo.Text = string.Empty;
-                txtNome.Text = string.Empty;
-                txtDescricao.Text = string.Empty;
-                txtDuracao.Text = string.Empty;
-                txtStatus.Text = string.Empty;
+                lblMessagem.Text = "Sprint atualizado com sucesso";
             }
             catch (Exception ex)
             {
-
                 lblMessagem.Text = ex.Message;
             }
         }

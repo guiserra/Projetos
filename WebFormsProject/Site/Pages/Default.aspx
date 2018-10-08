@@ -16,12 +16,12 @@
         <div class="container">
             <div class="span10 offset1">
                 <div class="row">
+                    <h1>BEM VINDO - <asp:Label ID="lblUsuarioLogado" runat="server" /> !
+                        <a id="botaoDireita" href="/Pages/ListaUsu.aspx" class="btn btn-warning btn">Lista de Usuários</a>
                     <h3 class="well">Sua lista de projetos
                     <a href="/Pages/DetalhesProj.aspx" class="btn btn-default btn-lg">Detalhes do Projetos</a>
-                        <a id="botaoDireita" href="/Pages/ListaUsu.aspx" class="btn btn-warning btn">Lista de Usuários</a>
-
+                        
                     </h3>
-                    <br />
                 </div>
                 <br />
                 <div class="dropdown">
@@ -33,6 +33,7 @@
                     </asp:DropDownList>
                     <asp:Button ID="btnSprint" runat="server" Text="Acessar" CssClass="btn btn-primary" OnClick="btnAcessarSprint" />
                 </div>
+                <br />
                 <asp:GridView ID="gridProjetos" runat="server" CssClass="table table-hover table-striped" GridLines="None" AutoGenerateColumns="false" BackColor="#ccffff">
                     <Columns>
                         <asp:BoundField DataField="Codigo" HeaderText="Código" />
@@ -49,7 +50,7 @@
                 </p>
 
                 <a href="/Pages/CadastroProj.aspx" class="btn btn-info btn-lg">Novo Projeto</a>
-                <a href="/Login.aspx" class="btn btn-danger btn-lg">Sair</a>
+                <a href="/Login.aspx" class="btn btn-danger btn-lg">Sair Sessão</a>
 
             </div>
         </div>

@@ -23,7 +23,7 @@
                         <asp:Button ID="btnPesquisa" runat="server" Text="Pesquisar" CssClass="btn btn-info" OnClick="btnPesquisarSprint" />
                     </div>
                     <br />
-                    <asp:GridView ID="gridSprint" runat="server" CssClass="table table-hover table-striped" GridLines="None" AutoGenerateColumns="false" BackColor="#999999">
+                    <asp:GridView ID="gridSprint" runat="server" CssClass="table table-hover table-striped" GridLines="None" AutoGenerateColumns="false" BackColor="#ccffff">
                         <Columns>
                             <asp:BoundField DataField="Codigo" HeaderText="Codigo" />
                             <asp:BoundField DataField="Nome" HeaderText="Nome" />
@@ -60,7 +60,7 @@
                             Status Sprint:
                         <br />
                             Completo: 
-                        <asp:CheckBox ID="txtStatus" runat="server" Width="45%" CssClass="checkbox" />
+                        <asp:CheckBox ID="txtStatus" runat="server" Width="45%" CssClass="checkbox" /> - Status Atual. 
                             <br />
                             <br />
                         </div>

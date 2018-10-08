@@ -16,7 +16,7 @@ namespace ClassLibrary1.Persistence
             try
             {
                 AbrirConexao();
-                Cmd = new SqlCommand("INSERT INTO Sprint (Nome, Semanas, Status, Observacoes) VALUES (@v1, @2, @3, @4)", Con);
+                Cmd = new SqlCommand("INSERT INTO Sprint (Nome, Semanas, Status, Observacoes) VALUES (@v1, @v2, @v3, @v4)", Con);
 
                 Cmd.Parameters.AddWithValue("@v1", sp.Nome);
                 Cmd.Parameters.AddWithValue("@v2", sp.Semanas);
@@ -40,13 +40,13 @@ namespace ClassLibrary1.Persistence
             try
             {
                 AbrirConexao();
-                Cmd = new SqlCommand("UPDATE Sprint SET Nome = @v1, Semanas = @v2, Status = @3, Observacoes = @4 WHERE Codigo = @v5", Con);
+                Cmd = new SqlCommand("UPDATE Sprint SET Nome = @v1, Semanas = @v2, Status = @v3, Observacoes = @v4 WHERE Codigo = @v5", Con);
 
                 Cmd.Parameters.AddWithValue("@v1", sp.Nome);
                 Cmd.Parameters.AddWithValue("@v2", sp.Semanas);
                 Cmd.Parameters.AddWithValue("@v3", sp.Status);
-                Cmd.Parameters.AddWithValue("@v4", sp.Codigo);
-                Cmd.Parameters.AddWithValue("@v5", sp.Observacoes);
+                Cmd.Parameters.AddWithValue("@v4", sp.Observacoes);
+                Cmd.Parameters.AddWithValue("@v5", sp.Codigo);
 
                 Cmd.ExecuteNonQuery();
             }
@@ -96,11 +96,11 @@ namespace ClassLibrary1.Persistence
                 {
                     p = new Sprint();
 
-                    Convert.ToInt32(Dr["Codigo"]);
-                    Convert.ToString(Dr["Nome"]);
-                    Convert.ToInt32(Dr["Semanas"]);
-                    Convert.ToBoolean(Dr["Status"]);
-                    Convert.ToString(Dr["Observacoes"]);
+                    p.Codigo = Convert.ToInt32(Dr["Codigo"]);
+                    p.Nome = Convert.ToString(Dr["Nome"]);
+                    p.Semanas = Convert.ToInt32(Dr["Semanas"]);
+                    p.Status = Convert.ToBoolean(Dr["Status"]);
+                    p.Observacoes = Convert.ToString(Dr["Observacoes"]);
                 }
 
                 return p;

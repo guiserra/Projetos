@@ -15,6 +15,9 @@ namespace Site.Pages
         {
             try
             {
+                string usuarioLogado = Convert.ToString(Session["NomeUsuarioLogado"]);
+                lblUsuarioLogado.Text = usuarioLogado;
+
                 ProjetoDAL pd = new ProjetoDAL();
 
                 if (pd == null)

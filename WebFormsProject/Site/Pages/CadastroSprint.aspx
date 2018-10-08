@@ -31,7 +31,7 @@
                         <asp:RequiredFieldValidator ID="requiredDesc" runat="server" ControlToValidate="txtDescricao" ErrorMessage="Digite uma descricao" ForeColor="Red" />
                         <br />
                         <br />
-                        Duração (semana):
+                        Duração (Semana):
                         <br />
                         <asp:TextBox TextMode="Number" ID="txtDuracao" runat="server" placeholder="Digite a duração" Width="45%" CssClass="form-control" />
                         <asp:RequiredFieldValidator ID="requiredDur" runat="server" ControlToValidate="txtDuracao" ErrorMessage="Digite a duração" ForeColor="Red" />
@@ -49,7 +49,7 @@
                         </p>
 
                         <asp:Button ID="btnCadastro" runat="server" Text="Cadastrar" CssClass="btn btn-success" OnClick="btnCadastrarSprint" />
-                        <a href="/Pages/ConsultaProjeto.aspx" class="btn btn-danger">Cancelar</a>
+                        <a href="/Pages/Default.aspx" class="btn btn-danger">Cancelar</a>
                     </div>
                 </div>
             </div>

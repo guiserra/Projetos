@@ -28,7 +28,7 @@ namespace Site
                     Session["CodigoUsuarioLogado"] = usuarioEncontrado.Codigo;
                     Session["NomeUsuarioLogado"] = usuarioEncontrado.Nome;
 
-                    Response.Redirect("/Default.aspx");
+                    Response.Redirect("/Pages/Default.aspx");
                 }
                 else
                 {
