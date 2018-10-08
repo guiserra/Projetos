@@ -31,24 +31,6 @@ namespace Site.Pages {
         protected global::System.Web.UI.WebControls.Label lblUsuarioLogado;
         
         /// <summary>
-        /// Controle ddlProjeto.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlProjeto;
-        
-        /// <summary>
-        /// Controle btnSprint.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSprint;
-        
-        /// <summary>
         /// Controle gridProjetos.
         /// </summary>
         /// <remarks>

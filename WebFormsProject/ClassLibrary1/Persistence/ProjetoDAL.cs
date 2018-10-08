@@ -11,14 +11,15 @@ namespace ClassLibrary1.Persistence
     public class ProjetoDAL : Conexao
     {
 
-        public void CadastrarProj(Projeto p)
+        public void CadastrarProj(Projeto p, int cod)
         {
             try
             {
                 AbrirConexao();
-                Cmd = new SqlCommand("INSERT INTO Projetos (Nome) VALUES (@v1)", Con);
+                Cmd = new SqlCommand("INSERT INTO Projetos (Nome, Cod_Usu) VALUES (@v1, @v2)", Con);
 
                 Cmd.Parameters.AddWithValue("@v1", p.Nome);
+                Cmd.Parameters.AddWithValue("@v2", cod);
 
                 Cmd.ExecuteNonQuery(); //Executa o metodo
             }
@@ -75,13 +76,14 @@ namespace ClassLibrary1.Persistence
             }
         }
 
-        public Projeto PesquisarId(int Codigo)
+        public Projeto PesquisarId(int Codigo, int cod)
         {
             try
             {
                 AbrirConexao();
-                Cmd = new SqlCommand("SELECT * FROM Projetos WHERE Codigo = @v1", Con);
+                Cmd = new SqlCommand("SELECT * FROM Projetos WHERE Codigo = @v1 and Cod_Usu = @v2", Con);
                 Cmd.Parameters.AddWithValue("@v1", Codigo);
+                Cmd.Parameters.AddWithValue("@v2", cod);
                 Dr = Cmd.ExecuteReader(); //Execucao da leitura das informaçoes no BD
 
                 Projeto p = null;
@@ -106,12 +108,13 @@ namespace ClassLibrary1.Persistence
             }
         }
 
-        public List<Projeto> ListarProj()
+        public List<Projeto> ListarProj(int cod)
         {
             try
             {
                 AbrirConexao();
-                Cmd = new SqlCommand("SELECT * FROM Projetos", Con);
+                Cmd = new SqlCommand("SELECT * FROM Projetos WHERE Cod_Usu = @v1", Con);
+                Cmd.Parameters.AddWithValue("@v1", cod);
                 Dr = Cmd.ExecuteReader();
 
                 List<Projeto> lista = new List<Projeto>();

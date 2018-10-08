@@ -10,8 +10,5 @@ namespace ClassLibrary1.Model
     {
         public int Codigo { get; set; }
         public string Nome { get; set; }
-
-        public List<Usuario> listaUsu;
-        public List<Sprint> listaSprint;
     }
 }

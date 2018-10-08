@@ -73,7 +73,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Pages\CadastroSprint.aspx" />
     <Content Include="Pages\Content\bootstrap-theme.css" />
     <Content Include="Pages\Content\bootstrap-theme.min.css" />
     <Content Include="Pages\Content\bootstrap.css" />
@@ -85,7 +84,6 @@
     <Content Include="Pages\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Login.aspx" />
     <Content Include="Pages\CadastroUsu.aspx" />
-    <Content Include="Pages\ListaSprint.aspx" />
     <Content Include="Pages\ListaUsu.aspx" />
     <Content Include="Pages\Scripts\bootstrap.js" />
     <Content Include="Pages\Scripts\bootstrap.min.js" />
@@ -111,13 +109,6 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\CadastroSprint.aspx.cs">
-      <DependentUpon>CadastroSprint.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\CadastroSprint.aspx.designer.cs">
-      <DependentUpon>CadastroSprint.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\CadastroUsu.aspx.cs">
       <DependentUpon>CadastroUsu.aspx</DependentUpon>
@@ -160,13 +151,6 @@
     </Compile>
     <Compile Include="Pages\DetalhesUsu.aspx.designer.cs">
       <DependentUpon>DetalhesUsu.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\ListaSprint.aspx.cs">
-      <DependentUpon>ListaSprint.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\ListaSprint.aspx.designer.cs">
-      <DependentUpon>ListaSprint.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\ListaUsu.aspx.cs">
       <DependentUpon>ListaUsu.aspx</DependentUpon>

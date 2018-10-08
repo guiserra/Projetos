@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <link type="text/css" rel="stylesheet" href="Content/bootstrap.css" />
+    <link href="../Assets/css/Exemplo.css" rel="stylesheet" />
 </head>
     <script src="Script/jquery-1.9.0.min.js"></script>
     <script src="Script/bootstrap.min.js"></script>
@@ -15,12 +16,8 @@
         <div class="container">
             <div class="span10 offset1">
                 <div class="row">
-                    <h3 class="well">
-                        Lista de Usuários
-                        <a href="/Pages/DetalhesUsu.aspx" class="btn btn-default btn-lg">Detalhes dos Usuários</a>
-                    </h3>
-                    <br />
-
+                    <h3 class="well">Lista de Usuários</h3>
+                    <a id="botaoDireita" href="/Pages/DetalhesUsu.aspx" class="btn btn-default btn-lg">Detalhes dos Usuários</a>
                     <asp:GridView ID="gridUsuarios" runat="server" CssClass="table table-hover table-striped" GridLines="None" AutoGenerateColumns="false" BackColor="#ccffff">
                         <Columns>
                             <asp:BoundField DataField="Codigo" HeaderText="Código" />

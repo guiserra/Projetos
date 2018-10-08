@@ -18,22 +18,10 @@
                 <div class="row">
                     <h1>BEM VINDO - <asp:Label ID="lblUsuarioLogado" runat="server" /> !
                         <a id="botaoDireita" href="/Pages/ListaUsu.aspx" class="btn btn-warning btn">Lista de Usuários</a>
-                    <h3 class="well">Sua lista de projetos
-                    <a href="/Pages/DetalhesProj.aspx" class="btn btn-default btn-lg">Detalhes do Projetos</a>
-                        
-                    </h3>
+                    </h1>
+                    <h3 class="well">Sua lista de projetos</h3>
+                    <a id="botaoDireita" href="/Pages/DetalhesProj.aspx" class="btn btn-default btn-lg">Detalhes do Projetos</a>
                 </div>
-                <br />
-                <div class="dropdown">
-                    Selecione a opção desejada:
-                    <asp:DropDownList ID="ddlProjeto" runat="server">
-                        <asp:ListItem Value="0" Text=" " />
-                        <asp:ListItem Value="1" Text="Cadastrar Sprint" />
-                        <asp:ListItem Value="2" Text="Listar Sprint" />
-                    </asp:DropDownList>
-                    <asp:Button ID="btnSprint" runat="server" Text="Acessar" CssClass="btn btn-primary" OnClick="btnAcessarSprint" />
-                </div>
-                <br />
                 <asp:GridView ID="gridProjetos" runat="server" CssClass="table table-hover table-striped" GridLines="None" AutoGenerateColumns="false" BackColor="#ccffff">
                     <Columns>
                         <asp:BoundField DataField="Codigo" HeaderText="Código" />
@@ -42,8 +30,6 @@
                     <RowStyle CssClass="cursor-pointer" />
                 </asp:GridView>
                 <br />
-
-
 
                 <p>
                     <asp:Label ID="lblMensagem" runat="server" />

@@ -18,10 +18,11 @@ namespace Site.Pages.Scripts
                 Projeto p = new Projeto();
 
                 p.Nome = txtNome.Text;
+                int cod = Convert.ToInt32(Session["CodigoUsuarioLogado"]);
 
                 ProjetoDAL pd = new ProjetoDAL();
-
-                pd.CadastrarProj(p); //Gravando a pessoa
+               
+                pd.CadastrarProj(p, cod); //Gravando a pessoa
 
                 lblMensagem.Text = "Projeto " + p.Nome + " cadastrado com Sucesso.";
 

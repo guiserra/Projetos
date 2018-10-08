@@ -14,6 +14,11 @@ namespace ClassLibrary1.Model
         public Boolean Status { get; set; }
         public string Observacoes { get; set; }
 
+        public Sprint()
+        {
+            
+        }
+
         public Sprint(int Codigo, string Nome, int Semanas, Boolean Status, string Observacoes)
         {
             this.Codigo = Codigo;
@@ -21,10 +26,6 @@ namespace ClassLibrary1.Model
             this.Semanas = Semanas;
             this.Status = Status;
             this.Observacoes = Observacoes;
-        }
-        public Sprint()
-        {
-            
         }
     }
 }

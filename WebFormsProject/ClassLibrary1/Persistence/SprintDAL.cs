@@ -11,17 +11,18 @@ namespace ClassLibrary1.Persistence
     public class SprintDAL : Conexao
     {
 
-        public void CadastrarSprt(Sprint sp)
+        public void CadastrarSprt(Sprint sp, int cod)
         {
             try
             {
                 AbrirConexao();
-                Cmd = new SqlCommand("INSERT INTO Sprint (Nome, Semanas, Status, Observacoes) VALUES (@v1, @v2, @v3, @v4)", Con);
+                Cmd = new SqlCommand("INSERT INTO Sprint (Nome, Semanas, Status, Observacoes, Cod_Proj) VALUES (@v1, @v2, @v3, @v4, @v5)", Con);
 
                 Cmd.Parameters.AddWithValue("@v1", sp.Nome);
                 Cmd.Parameters.AddWithValue("@v2", sp.Semanas);
                 Cmd.Parameters.AddWithValue("@v3", sp.Status);
                 Cmd.Parameters.AddWithValue("@v4", sp.Observacoes);
+                Cmd.Parameters.AddWithValue("@v5", cod);
 
                 Cmd.ExecuteNonQuery(); //Executa o metodo
             }
@@ -115,12 +116,13 @@ namespace ClassLibrary1.Persistence
             }
         }
 
-        public List<Sprint> ListarSprt()
+        public List<Sprint> ListarSprt(int cod)
         {
             try
             {
                 AbrirConexao();
-                Cmd = new SqlCommand("SELECT * FROM Sprint", Con);
+                Cmd = new SqlCommand("SELECT * FROM Sprint WHERE Cod_Proj = @v1", Con);
+                Cmd.Parameters.AddWithValue("@v1", cod);
                 Dr = Cmd.ExecuteReader();
 
                 List<Sprint> lista = new List<Sprint>();
