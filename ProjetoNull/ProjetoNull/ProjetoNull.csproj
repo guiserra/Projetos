@@ -206,6 +206,7 @@
     <Compile Include="Models\Disponibilidade.cs" />
     <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\EstadoCivil.cs" />
+    <Compile Include="Models\Fase.cs" />
     <Compile Include="Models\Fase1.cs" />
     <Compile Include="Models\Fase2.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -215,8 +216,20 @@
     <Compile Include="Models\Raca.cs" />
     <Compile Include="Models\Sexo.cs" />
     <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Persistencia\NullContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\CandidatoCadastroRepository.cs" />
+    <Compile Include="Repositories\CandidatoInfoRepository.cs" />
+    <Compile Include="Repositories\DependenteRepository.cs" />
+    <Compile Include="Repositories\FaseRepository.cs" />
+    <Compile Include="Repositories\ICandidatoInfoRepository.cs" />
+    <Compile Include="Repositories\IDependentesRepository.cs" />
+    <Compile Include="Repositories\ICandidatoCadastroRepository.cs" />
+    <Compile Include="Repositories\IFaseRepository.cs" />
+    <Compile Include="Repositories\IUsuarioRepository.cs" />
+    <Compile Include="Repositories\UsuarioRepository.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="UnitsOfWork\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />

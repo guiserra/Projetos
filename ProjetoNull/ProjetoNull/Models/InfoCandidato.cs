@@ -20,5 +20,7 @@ namespace ProjetoNull.Models
         public Fase1 Fase1 { get; set; }
         public int Fase2Id { get; set; }
         public Fase2 Fase2 { get; set; }
+
+        public CadastroCandidato Cadastro { get; set; }
     }
 }
